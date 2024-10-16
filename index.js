@@ -66,6 +66,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const allowedOrigins = ['https://user-task-create.netlify.app',];
+// const allowedOrigins = ['http://localhost:5173',];
 
 const corsOptions = {
   origin: function (origin, callback) {

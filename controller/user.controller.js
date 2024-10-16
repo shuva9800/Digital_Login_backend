@@ -73,6 +73,8 @@ exports.loginHandler = async (req,res)=>{
         
         return res.cookie("loginToken",token,{
                 httpOnly: true,
+                secure: process.env.NODE_ENV === "production", // Only set in production over HTTPS
+                sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', 
                 expires: new Date(Date.now() + 24*60*60*1000 )
         }, ).status(200).json({
             success: true,
