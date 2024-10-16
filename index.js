@@ -78,7 +78,8 @@ const corsOptions = {
   credentials: true,
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
 
 // Database connection
 dbconnect();
