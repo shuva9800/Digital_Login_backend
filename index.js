@@ -65,7 +65,7 @@ app.listen(PORT, () => {
 app.use(express.json());
 app.use(cookieParser());
 
-const allowedOrigins = ["https://user-task-create.netlify.app"];
+const allowedOrigins = ['https://user-task-create.netlify.app',];
 
 const corsOptions = {
   origin: function (origin, callback) {
